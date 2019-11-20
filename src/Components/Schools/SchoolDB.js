@@ -110,6 +110,8 @@ const artSchools = [
   }
 ]
 
+//LAW
+
 const lawSchools = [
   {
     name: 'Yale  University',
@@ -493,7 +495,7 @@ const techSchools = [
   }
 ]
 
-Science
+//Science
 
 const scienceJobs = [
   'Psychologist',
@@ -505,7 +507,7 @@ const scienceJobs = [
   'Environmental Science and Protection Technician'
 ]
 
-scienceSchools = [
+const scienceSchools = [
   {
     name: 'Stanford University',
     city: 'Stanford, CA',
