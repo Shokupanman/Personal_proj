@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+}
+
+.header {
+  background-color: #c1b8af;
+  display: flex;
+  width: auto;
+  height: 13rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoDiv {
+  position: relative;
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  background-color: black;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+}
+
+.userInfo {
+  width: 20rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefffe;
+  margin: 1rem;
+}
+
+.nav {
+  width: 20rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefffe;
+  margin: 1rem;
+}
