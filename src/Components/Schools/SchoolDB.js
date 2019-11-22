@@ -333,10 +333,10 @@ const educationSchools = [
 //Government and Public Administration. ...
 
 const govJobs = [
-  'School Counselor',
+  'Civil Services',
   'Librarian',
   'Social Worker',
-  'Special Education Teacher',
+  'Railway Engineers',
   'Police Officer',
   'Firefighter',
   'Athletic Director',
