@@ -4,6 +4,7 @@ import axios from 'axios'
 import './Register.scss'
 import { updateUserInfo } from '../../ducks/reducer'
 import { connect } from 'react-redux'
+import logo from '../../logo.png'
 class Register extends Component {
   state = {
     email: '',
@@ -38,6 +39,9 @@ class Register extends Component {
   render() {
     return (
       <div className="regidiv">
+        <div>
+          <img className="logo" src={logo} />
+        </div>
         <div className="register">
           <div className="inputbk">
             <span className="input">
