@@ -25,6 +25,7 @@ $dreamB: #273043;
 .inputbk {
   display: flex;
   align-items: center;
+  cursor: default;
   justify-content: flex-start;
   z-index: 1;
   border-radius: 20%;
@@ -44,6 +45,7 @@ $dreamB: #273043;
 
 .button {
   position: relative;
+  cursor: pointer;
   left: 6rem;
   color: $dreamC;
   text-transform: uppercase;

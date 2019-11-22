@@ -6,6 +6,7 @@ import { updateUserInfo } from '../../ducks/reducer'
 import { connect } from 'react-redux'
 import logo from '../../logo.png'
 import './Login.scss'
+import Swal from 'sweetalert2'
 class Register extends Component {
   state = {
     email: '',
@@ -21,19 +22,30 @@ class Register extends Component {
   }
 
   register = () => {
-    if (this.state.password1 === this.state.password2) {
-      const { password1: password, user_name, email } = this.state
-      axios
-        .post('/auth/register', { user_name, email, password })
-        .then(res => {
-          console.log(res.data)
-          this.props.updateUserInfo(res.data.user)
-        })
-        .catch(err => {
-          console.log(err)
-        })
+    if (
+      this.state.password2 &&
+      this.state.password &&
+      this.state.user_name &&
+      this.state.email
+    ) {
+      if (this.state.password1 === this.state.password2) {
+        const { password1: password, user_name, email } = this.state
+        axios
+          .post('/auth/register', { user_name, email, password })
+          .then(res => {
+            console.log(res.data)
+            this.props.updateUserInfo(res.data.user)
+            this.props.history.push('/dashboard')
+          })
+          .catch(err => {
+            console.log(err)
+            Swal.fire('WELCOME TO DREAM CATCHERS!')
+          })
+      } else {
+        console.log("Passwords don't match")
+      }
     } else {
-      console.log("Passwords don't match")
+      Swal.fire('Missing inputs required')
     }
   }
 
@@ -55,6 +67,7 @@ class Register extends Component {
                     onChange={e => this.handleChange('email', e.target.value)}
                     placeholder="Email"
                     id="email"
+                    required
                   />{' '}
                   <label className="Input-label" htmlFor="email">
                     Email
@@ -70,6 +83,7 @@ class Register extends Component {
                     }
                     placeholder="User Name"
                     id="user"
+                    required
                   />{' '}
                   <label className="Input-label" htmlFor="user">
                     User Name
@@ -85,6 +99,7 @@ class Register extends Component {
                     }
                     placeholder="Password"
                     id="password"
+                    required
                   />
                   <label className="Input-label" htmlFor="password">
                     Password
@@ -100,6 +115,7 @@ class Register extends Component {
                       this.handleChange('password2', e.target.value)
                     }
                     placeholder="One more time"
+                    required
                   />
                   <label className="Input-label" htmlFor="password2">
                     {' '}
@@ -108,18 +124,16 @@ class Register extends Component {
                 </div>
                 <span></span>
               </span>
-              <Link to="/dashboard">
-                <div className="button_cont" align="center">
-                  <button
-                    onClick={this.register}
-                    className="button"
-                    target="_blank"
-                    rel="nofollow noopener"
-                  >
-                    Register
-                  </button>
-                </div>
-              </Link>
+              <dv className="button_cont" align="center">
+                <button
+                  onClick={this.register}
+                  className="button"
+                  target="_blank"
+                  rel="nofollow noopener"
+                >
+                  Register
+                </button>
+              </dv>
             </div>
           </div>
           <Link to="/" className="link">

@@ -18,17 +18,21 @@ class Login extends Component {
   }
 
   login = () => {
-    const { email, password } = this.state
-    axios
-      .post('/auth/login', { email, password })
-      .then(res => {
-        this.props.updateUserInfo(res.data.user)
-        Swal.fire(res.data.message)
-        this.props.history.push('/dashboard')
-      })
-      .catch(err => {
-        Swal.fire(err.response.data.message)
-      })
+    if (this.state.password && this.state.email) {
+      const { email, password } = this.state
+      axios
+        .post('/auth/login', { email, password })
+        .then(res => {
+          this.props.updateUserInfo(res.data.user)
+          Swal.fire(res.data.message)
+          this.props.history.push('/dashboard')
+        })
+        .catch(err => {
+          Swal.fire(err.response.data.message)
+        })
+    } else {
+      Swal.fire('Missing Inputs requried')
+    }
   }
 
   ///value={this.state.password}
@@ -54,6 +58,7 @@ class Login extends Component {
                       onChange={e => this.handleChange('email', e.target.value)}
                       placeholder="Email"
                       id="email"
+                      required
                     />{' '}
                     <label className="Input-label" htmlFor="email">
                       Email
@@ -69,22 +74,21 @@ class Login extends Component {
                       }
                       placeholder="Password"
                       id="password"
+                      required
                     />
                     <label className="Input-label" htmlFor="password">
                       Password
                     </label>
                   </div>
                   <div className="divy">
-                    <Link className="a" to="/dashboard">
-                      <button
-                        onClick={this.login}
-                        className="button2"
-                        target="_blank"
-                        rel="nofollow noopener"
-                      >
-                        Login
-                      </button>
-                    </Link>
+                    <button
+                      onClick={this.login}
+                      className="button2"
+                      target="_blank"
+                      rel="nofollow noopener"
+                    >
+                      Login
+                    </button>
                   </div>
                 </div>
               </span>
