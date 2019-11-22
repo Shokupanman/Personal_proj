@@ -213,6 +213,103 @@ const vidCareers = [
     avgPay: '40k- 80k',
     description:
       'A videographer is hired to record videos for television, internet, and film. Unlike cinematographers who perform similar tasks working on the sets of major motion pictures and record on film, videographers usually employ some kind of electronic media. This may be videotape, hard disk, streaming media, and so on.',
+    img:
+      'https://s3.amazonaws.com/pbblogassets/uploads/2017/08/27130641/Photography-Cover.jpg'
+  }
+]
+
+//Architecture
+
+const architectureReqs =
+  "To become an architect, you need to complete a bachelor's or master's degree program in architecture. Then, an internship and ultimately licensure is required to work in any state. Architects who want to consult or work in academia will need a doctorate in the field"
+
+const architectureCareer = [
+  {
+    title: 'Architectural and Engineering Manager',
+    reqs:
+      "Most architectural and engineering managers have at least a bachelor's degree in an engineering specialty or a master's degree in architecture. ... Typically, those who prefer to manage in technical areas pursue an MsEM or MSTM and those interested in more general management skills earn an MBA",
+    avgPay: '132k',
+    description:
+      'Architectural and engineering managers are responsible for developing the overall concept of a new product or for solving the technical problems that prevent the completion of a project. ... They propose budgets for projects and programs and determine staff, training, and equipment needs',
+    img:
+      'https://www.cedengineering.com/userfiles/engineering_management_1420830393.jpg'
+  },
+  {
+    title: 'Civil Engineer',
+    reqs:
+      "Civil engineers need a bachelor's degree in civil engineering, in one of its specialties, or in civil engineering technology. Programs in civil engineering and civil engineering technology include coursework in math, statistics, engineering mechanics and systems, and fluid dynamics, depending on the specialty",
+    avgPay: '60k - 130k',
+    description:
+      'Civil engineers create, improve and protect the environment in which we live. They plan, design and oversee construction and maintenance of building structures and infrastructure, such as roads, railways, airports, bridges, harbours, dams, irrigation projects, power plants, and water and sewerage systems.',
+    img:
+      'https://www.careergirls.org/wp-content/uploads/2015/06/Civil_Engineer_2_1920x1080.jpg'
+  },
+  {
+    title: 'Drafter',
+    reqs:
+      "Drafters generally need to complete postsecondary education in drafting. This is typically done through a 2-year associate's degree from a technical institute or community college. ... Most 4-year colleges do not offer training in drafting, but they do offer classes in engineering, architecture, and mathematics.",
+    avgPay: '39k - 62k',
+    description:
+      'Drafters typically do the following: Design plans using computer-aided design and drafting (CADD) software. ... Prepare multiple versions of designs for review by engineers and architects. Specify dimensions, materials, and procedures for new products.',
+    img: 'https://i.ytimg.com/vi/y8WjCE-YfeE/maxresdefault.jpg'
+  },
+  {
+    title: 'Industrial Designer',
+    reqs:
+      "A bachelor's degree in industrial design, architecture, or engineering is usually required for entry-level industrial design jobs. Most industrial design programs include courses that industrial designers need in design: drawing, computer-aided design and drafting (CADD), and three-dimensional modeling.",
+    avgPay: '48k - 91k',
+    description:
+      'Industrial designers develop the concepts for manufactured products, such as cars, home appliances, and toys. They combine art, business, and engineering to make products that people use every day. Industrial designers focus on the user experience in creating style and function for a particular gadget or appliance.',
+    img:
+      'https://www.javelin-tech.com/3d/wp-content/uploads/solidworks-industrial-designer.jpg'
+  },
+  {
+    title: 'Construction and Building Inspectors',
+    reqs:
+      'Most employers require construction and building inspectors to have at least a high school diploma and work experience in construction trades. Inspectors also typically learn on the job. Many states and local jurisdictions require some type of license or certification.',
+    avgPay: '54k - 60k',
+    description:
+      'Construction and building inspectors typically do the following: Review plans to ensure they meet building codes, local ordinances, zoning regulations, and contract specifications. Approve building plans that are satisfactory. Monitor construction sites periodically to ensure overall compliance',
+    img:
+      'https://www.irecsolarcareermap.org/assets/images-jobs/BuildingInspector.jpg'
+  }
+]
+
+//Education and Training. ...
+
+const educationReqs =
+  "A master's degree in school counseling or a related field like psychology, a supervised internship completed under a licensed professional school counselor, passing scores on a certification exam, a clean background check."
+
+const educationCareers = [
+  {
+    title: 'Postsecondary Teacher',
+    reqs:
+      "Educational requirements vary by subject and the type of educational institution. Typically, postsecondary teachers must have a Ph.D. However, a master's degree may be enough for some postsecondary teachers at community colleges, and others may need work experience in their field of expertise.",
+    avgPay: '72k',
+    description:
+      'What does a Postsecondary Teacher do? Postsecondary teachers teach students beyond the high school level. They work with adults to instruct them in many different academic subjects as well as career and technical areas. They may also publish scholarly books and papers and conduct research.',
+    img:
+      'https://education.cu-portland.edu/wp-content/uploads/sites/33/2012/10/education-professor.jpg'
+  },
+  {
+    title: 'Curriculum Developer',
+    reqs: '',
+    avgPay: '',
+    description: '',
+    img: ''
+  },
+  {
+    title: 'School Counselor',
+    reqs: '',
+    avgPay: '',
+    description: '',
+    img: ''
+  },
+  {
+    title: 'Special Education Teacher',
+    reqs: '',
+    avgPay: '',
+    description: '',
     img: ''
   }
 ]

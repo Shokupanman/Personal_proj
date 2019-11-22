@@ -1,11 +1,59 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { updateUserInfo } from '../../ducks/reducer'
+import { connect } from 'react-redux'
+import Swal from 'sweetalert2'
+import './Login.css'
+class Login extends Component {
+  state = {
+    email: '',
+    password: ''
+  }
 
-export default class Login extends Component {
+  handleChange = (key, value) => {
+    this.setState({ [key]: value })
+  }
+
+  login = () => {
+    const { email, password } = this.state
+    axios
+      .post('/auth/login', { email, password })
+      .then(res => {
+        this.props.updateUserInfo(res.data.user)
+        Swal.fire(res.data.message)
+        this.props.history.push('/dashboard')
+      })
+      .catch(err => {
+        Swal.fire(err.response.data.message)
+      })
+  }
+
   render() {
     return (
       <div>
-        <h1>Login</h1>
+        <div className="login">
+          <input
+            type="text"
+            onChange={e => this.handleChange('email', e.target.value)}
+            value={this.state.email}
+            placeholder="Email"
+          />
+          <input
+            type="text"
+            onChange={e => this.handleChange('password', e.target.value)}
+            value={this.state.password}
+            placeholder="Password"
+          />
+          <button onClick={this.login}>LOGIN</button>
+        </div>
+        <hr />
+        <Link to="/register">
+          <h1>*Not a part of the fam? Click here to change that!*</h1>
+        </Link>
       </div>
     )
   }
 }
+
+export default connect(null, { updateUserInfo })(Login)

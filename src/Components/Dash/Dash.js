@@ -31,7 +31,7 @@ export default class Dash extends Component {
             <div className="coffeeLink">
               <Link to="/coffee">
                 <button className="coffeeBut">
-                  <i class="fas fa-mug-hot"></i>
+                  <i className="fas fa-mug-hot"></i>
                 </button>
               </Link>
             </div>
