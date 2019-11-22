@@ -38,62 +38,64 @@ class Login extends Component {
   render() {
     return (
       <div className="regidiv">
-        <div>
-          <img className="logo" src={logo} />
-        </div>
-        <div className="register">
-          <div className="inputbk2">
-            <span className="input">
-              <div className="login2">
-                <div className="emailInput2">
-                  <input
-                    className="Input-text"
-                    type="text"
-                    value={this.state.name}
-                    onChange={e => this.handleChange('email', e.target.value)}
-                    placeholder="Email"
-                    id="email"
-                  />{' '}
-                  <label className="Input-label" htmlFor="email">
-                    Email
-                  </label>
-                </div>
-                <div className="passwordInput22">
-                  <input
-                    className="Input-text"
-                    type="password"
-                    value={this.state.password}
-                    onChange={e =>
-                      this.handleChange('password', e.target.value)
-                    }
-                    placeholder="Password"
-                    id="password"
-                  />
-                  <label className="Input-label" htmlFor="password">
-                    Password
-                  </label>
-                </div>
-                <div className="divy">
-                  <Link className="a" to="/dashboard">
-                    <button
-                      onClick={this.login}
-                      className="button2"
-                      target="_blank"
-                      rel="nofollow noopener"
-                    >
-                      Login
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </span>
-            <Link className="link" to="/register">
-              <h1 className="redirect2">
-                *Not a part of the fam? Click here to change that!*
-              </h1>
-            </Link>
+        <section className="bigOne">
+          <div>
+            <img className="logo" src={logo} />
           </div>
-        </div>
+          <div className="register">
+            <div className="inputbk2">
+              <span className="input">
+                <div className="login2">
+                  <div className="emailInput2">
+                    <input
+                      className="Input-text"
+                      type="text"
+                      value={this.state.name}
+                      onChange={e => this.handleChange('email', e.target.value)}
+                      placeholder="Email"
+                      id="email"
+                    />{' '}
+                    <label className="Input-label" htmlFor="email">
+                      Email
+                    </label>
+                  </div>
+                  <div className="passwordInput22">
+                    <input
+                      className="Input-text"
+                      type="password"
+                      value={this.state.password}
+                      onChange={e =>
+                        this.handleChange('password', e.target.value)
+                      }
+                      placeholder="Password"
+                      id="password"
+                    />
+                    <label className="Input-label" htmlFor="password">
+                      Password
+                    </label>
+                  </div>
+                  <div className="divy">
+                    <Link className="a" to="/dashboard">
+                      <button
+                        onClick={this.login}
+                        className="button2"
+                        target="_blank"
+                        rel="nofollow noopener"
+                      >
+                        Login
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </span>
+              <Link className="link" to="/register">
+                <h1 className="redirect2">
+                  *Not a part of the fam? Click here to change that!*
+                </h1>
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     )
   }
