@@ -28,7 +28,7 @@ class Login extends Component {
           this.props.history.push('/dashboard')
         })
         .catch(err => {
-          Swal.fire(err.response.data.message)
+          Swal.fire(err.res.data.message)
         })
     } else {
       Swal.fire('Missing Inputs requried')

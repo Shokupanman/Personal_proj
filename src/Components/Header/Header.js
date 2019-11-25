@@ -23,7 +23,7 @@ const Header = props => {
     <div>
       <section className="header">
         <div className="userInfo">
-          <h3>Welcome {props.user_name} !</h3>
+          <h1 className="welcome">Welcome {props.user_name} !</h1>
           <Link to="/">
             <button className="logoutBut" onClick={logout}>
               Logout
