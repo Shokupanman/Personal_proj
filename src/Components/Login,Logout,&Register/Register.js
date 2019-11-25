@@ -24,7 +24,7 @@ class Register extends Component {
   register = () => {
     if (
       this.state.password2 &&
-      this.state.password &&
+      this.state.password1 &&
       this.state.user_name &&
       this.state.email
     ) {
@@ -35,11 +35,11 @@ class Register extends Component {
           .then(res => {
             console.log(res.data)
             this.props.updateUserInfo(res.data.user)
-            this.props.history.push('/dashboard')
+            this.props.history.push('/')
+            Swal.fire('WELCOME TO THE FAM! Now try your login!!')
           })
           .catch(err => {
             console.log(err)
-            Swal.fire('WELCOME TO DREAM CATCHERS!')
           })
       } else {
         console.log("Passwords don't match")
@@ -50,11 +50,12 @@ class Register extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className="regidiv">
         <section className="bigOne">
           <div>
-            <img className="logo" src={logo} />
+            <img className="logo" alt="" src={logo} />
           </div>
           <div className="register">
             <div className="inputbk">
@@ -124,7 +125,7 @@ class Register extends Component {
                 </div>
                 <span></span>
               </span>
-              <dv className="button_cont" align="center">
+              <div className="button_cont" align="center">
                 <button
                   onClick={this.register}
                   className="button"
@@ -133,7 +134,7 @@ class Register extends Component {
                 >
                   Register
                 </button>
-              </dv>
+              </div>
             </div>
           </div>
           <Link to="/" className="link">
@@ -154,4 +155,4 @@ const mapDispatchToProps = {
   updateUserInfo
 }
 
-export default connect(null, { mapStateToProps, mapDispatchToProps })(Register)
+export default connect(mapStateToProps, mapDispatchToProps)(Register)

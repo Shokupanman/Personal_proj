@@ -1,6 +1,8 @@
-import react from 'react'
+import React from 'react'
+import './styles.scss'
+import Dash from './Dash'
 
-let quotes = [
+const quotes = [
   {
     quote: 'Your attitude determines your direction.',
     author: 'Ralph Waldo Emerson'
@@ -92,7 +94,60 @@ let quotes = [
     quote:
       'What lies behind you and what lies in front of you pales in comparison to what lies inside of you',
     author: 'Ralph Waldo Emerson'
+  },
+  {
+    quote: 'Your attitude determines your direction.',
+    author: 'Ralph Waldo Emerson'
+  },
+  {
+    quote: 'Do what you have to do until you can do what you want to do.',
+    author: 'Oprah Winfrey'
+  },
+  {
+    quote: 'Being alone has a power that very few people can handle.',
+    author: 'Steven Aitchison'
+  },
+  {
+    quote: "My goal is to build a life I don't need a vacation from.",
+    author: 'Rob Hill Sr'
+  },
+  { quote: 'Always do what you are afraid to do.', author: 'Unknown' },
+  {
+    quote: 'Be somebody who makes everybody feel like a somebody.',
+    author: 'Unknown'
+  },
+  {
+    quote: 'Make it happen. Shock everyone.',
+    author: 'Unknown'
+  },
+  {
+    quote: "Three months from now, you'll thank yourself.",
+    author: 'Unknown'
+  },
+  {
+    quote: 'Travel far enough to meet yourself.',
+    author: 'Unknown'
+  },
+  {
+    quote: 'Progress, not perfection.',
+    author: 'Unknown'
+  },
+  {
+    quote: 'Just keep swimming .',
+    author: 'Dory, Find Nemo'
+  },
+  {
+    quote: 'Remember why you started.',
+    author: 'Unknown'
   }
 ]
 
-export default quotes
+const QuotesDB = () => {
+  return (
+    <div>
+      <Dash quotes={quotes} />
+    </div>
+  )
+}
+
+export default QuotesDB

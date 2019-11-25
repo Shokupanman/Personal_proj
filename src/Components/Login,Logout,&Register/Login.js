@@ -41,10 +41,10 @@ class Login extends Component {
   //onChange={e => this.handleChange('email', e.target.value)}
   render() {
     return (
-      <div className="regidiv">
+      <div className="regidiv1">
         <section className="bigOne">
           <div>
-            <img className="logo" src={logo} />
+            <img className="logo" alt="" src={logo} />
           </div>
           <div className="register">
             <div className="inputbk2">

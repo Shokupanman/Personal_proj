@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../logo.png'
-import './Header.css'
+import './Header.scss'
 import { connect } from 'react-redux'
 import { updateUserInfo } from '../../ducks/reducer'
 import axios from 'axios'
@@ -23,18 +23,28 @@ const Header = props => {
     <div>
       <section className="header">
         <div className="userInfo">
-          <h3>{props.user_name}</h3>
+          <h3>Welcome {props.user_name} !</h3>
           <Link to="/">
-            <button onClick={logout}>Logout</button>
+            <button className="logoutBut" onClick={logout}>
+              Logout
+            </button>
           </Link>
         </div>
         <div className="logoDiv">
           <Link to="/dashboard">
-            <img className="logo" src={logo} />
+            <img className="logo" alt="" src={logo} />
           </Link>
         </div>
         <div className="nav">
-          <h1>NAVBAR</h1>
+          <Link className="navi" to="/schools">
+            <i className="fas fa-graduation-cap"></i>Schools
+          </Link>
+          <Link className="navi" to="/companies">
+            <i className="fas fa-building"></i>Companies
+          </Link>
+          <Link className="navi" to="/todo">
+            <i className="fas fa-list-alt"></i>My List!
+          </Link>
         </div>
       </section>
     </div>

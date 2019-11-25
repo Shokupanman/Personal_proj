@@ -1,6 +1,8 @@
 * {
   margin: 0;
 }
+$dreamC: #ade1b1;
+$dreamB: #273043;
 
 .header {
   background-image: url('https://images.unsplash.com/photo-1435224668334-0f82ec57b605?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
@@ -31,21 +33,50 @@
 }
 
 .userInfo {
-  width: 20rem;
+  width: 50rem;
   height: 5rem;
+  font-size: 3rem;
+  color: #fefffe;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fefffe;
+  background-color: transparent;
   margin: 1rem;
 }
 
+.logoutBut {
+  position: relative;
+  cursor: pointer;
+  left: 6rem;
+  color: $dreamC;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: black;
+  padding: 20px;
+  border: 4px solid $dreamC;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+
+  &:hover {
+    color: black;
+    background: $dreamC;
+    border-color: black;
+    transition: all 0.4s ease 0s;
+  }
+}
+
 .nav {
-  width: 20rem;
+  margin: 1rem;
+  width: 50rem;
   height: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #fefffe;
+  background-color: transparent;
+  font-size: 3rem;
   margin: 1rem;
+}
+
+.navi {
+  color: #fefffe;
 }
