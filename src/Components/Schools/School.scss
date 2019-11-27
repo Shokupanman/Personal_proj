@@ -1,0 +1,60 @@
+$boi: #de3c4b;
+
+.pics2 {
+  max-height: 70rem;
+  max-width: 80rem;
+  margin: 1rem;
+}
+
+.bigboi2 {
+  display: flex;
+  justify-content: space-between;
+  width: 170rem;
+  height: 60rem;
+}
+.taskdeal2 {
+  height: 50rem;
+  width: 500rem;
+  border: double 0.5rem $boi;
+  position: relative;
+  left: 10rem;
+  top: 7rem;
+}
+.catT2 {
+  width: 400rem;
+  height: auto;
+  display: flex;
+  margin: 4rem;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.headi2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 80rem;
+  margin: 5rem 8rem;
+}
+.lander2 {
+  display: flex;
+  max-width: 100rem;
+  justify-content: space-evenly;
+}
+.description2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 30rem;
+  max-width: 100rem;
+  margin: 5rem;
+}
+.title2 {
+  font-size: 5rem;
+}
+
+.text2 {
+  font-size: 3rem;
+  margin: 2rem;
+}
