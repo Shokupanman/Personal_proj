@@ -21,11 +21,18 @@ app.use(
 app.post('/auth/register', ctrl.register)
 app.post('/auth/login', ctrl.login)
 app.delete('/auth/logout', ctrl.logout)
+app.get('/api/user', ctrl.getSession)
 
 app.post('/todo/post', postCtrl.addPost)
 app.put('/todo/edit', postCtrl.editPost)
 app.delete('/todo/remove', postCtrl.deletePost)
 app.get('/todo/list', postCtrl.getPosts)
+
+app.post('/api/insert', ctrl.glads)
+app.get('/api/schools', ctrl.getSchools)
+
+app.post('/api/goodies', ctrl.goodies)
+app.get('/api/companies', ctrl.getCompanies)
 
 massive(CONNECTION_STRING).then(db => {
   app.set('db', db)

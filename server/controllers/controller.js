@@ -1,4 +1,8 @@
 const bcrypt = require('bcryptjs')
+const schoolDB = require('../schoolDB')
+const companiesDB = require('../companiesDB')
+
+//console.log(companiesDB.agCareers)
 
 module.exports = {
   register: async (req, res) => {
@@ -42,5 +46,56 @@ module.exports = {
   logout: (req, res) => {
     req.session.destroy()
     res.status(200).send({ message: 'See ya later!' })
+  },
+  getSession: (req, res) => {
+    res.status(200).send(req.session.dreamer)
+  },
+  getSchools: (req, res) => {
+    const db = req.app.get('db')
+    db.get_schools()
+      .then(schools => {
+        res.status(200).send(schools)
+      })
+      .catch(err => {
+        console.log(err)
+        res.status(500).send(err)
+      })
+  },
+  getCompanies: (req, res) => {
+    const db = req.app.get('db')
+    db.get_goodies()
+      .then(companies => {
+        res.status(200).send(companies)
+      })
+      .catch(err => {
+        console.log(err)
+        res.status(200).send(err)
+      })
+  },
+  glads: (req, res) => {
+    const db = req.app.get('db')
+    schoolDB.codingBootcamps.forEach(async school => {
+      let result = await db.insert([
+        school.name,
+        school.city,
+        school.inState,
+        school.outofState,
+        school.img
+      ])
+    })
+    res.sendStatus(200)
+  },
+  goodies: (req, res) => {
+    const db = req.app.get('db')
+    companiesDB.engineerCareers.forEach(async company => {
+      let results = await db.goodies([
+        company.title,
+        company.reqs,
+        company.avgPay,
+        company.description,
+        company.img
+      ])
+    })
+    res.sendStatus(200)
   }
 }

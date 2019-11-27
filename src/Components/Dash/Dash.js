@@ -238,9 +238,9 @@ export default class Dash extends Component {
             </section>
             <div className="explanation">
               <p>
-                This site is to here to help you pursue your dream! I beleive
-                that there are no limits to our possibilites if we have a plan!
-                OTHER CRAp
+                Dream Catchers is here to help you PURSUE and DISCOVER your
+                dream! Explore some of the top schools and companies for each
+                subject!
               </p>
             </div>
             <section className="link2">

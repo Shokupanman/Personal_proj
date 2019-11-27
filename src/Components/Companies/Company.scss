@@ -1,0 +1,55 @@
+$boi: #de3c4b;
+
+.pics {
+  max-height: 50rem;
+  max-width: 50rem;
+  margin: 1rem;
+}
+
+.bigboi {
+  display: flex;
+  justify-content: space-between;
+  width: 170rem;
+  height: 60rem;
+}
+.taskdeal {
+  height: 50rem;
+  width: 35rem;
+  border: double 0.5rem $boi;
+  position: relative;
+  left: 10rem;
+  top: 7rem;
+}
+.catT {
+  width: 400rem;
+  height: auto;
+  display: flex;
+  margin: 4rem;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.headi {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100rem;
+  margin: 5rem 8rem;
+}
+.lander {
+  display: flex;
+  max-width: 100rem;
+  justify-content: space-evenly;
+}
+.description {
+  width: auto;
+  height: 20rem;
+  margin: 4rem;
+}
+.title {
+  font-size: 5rem;
+}
+
+.text {
+  font-size: 3rem;
+}

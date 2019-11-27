@@ -54,7 +54,7 @@ class Login extends Component {
                     <input
                       className="Input-text"
                       type="text"
-                      value={this.state.name}
+                      value={this.state.email}
                       onChange={e => this.handleChange('email', e.target.value)}
                       placeholder="Email"
                       id="email"

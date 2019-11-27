@@ -78,8 +78,10 @@ $dreamB: #273043;
 }
 
 .explanation {
-  background-color: #c1b8af;
-  max-width: 80vh;
+  background-color: transparent;
+  border: 1rem double #ffffee;
+  color: #ffffee;
+  max-width: 90vh;
   max-height: 80vh;
   font-size: 3rem;
 }
