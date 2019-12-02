@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
+import { CardElement, injectStripe } from 'react-stripe-elements'
 
-export default class Coffee extends Component {
+class Coffee extends Component {
+  constructor(props) {
+    super(props)
+    this.submit = this.submit.bind(this)
+  }
+
+  async submit(ev) {
+    // User clicked submit
+  }
+
   render() {
     return (
-      <div>
-        <h1>COFFEE</h1>
+      <div className="checkout">
+        <p>Would you like to complete the purchase?</p>
+        <CardElement />
+        <button onClick={this.submit}>Purchase</button>
       </div>
     )
   }
 }
+
+export default injectStripe(Coffee)

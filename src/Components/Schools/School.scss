@@ -32,7 +32,8 @@ $boi: #de3c4b;
 .headi2 {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  position: relative;
+  right: 20rem;
   width: 80rem;
   margin: 5rem 8rem;
 }
@@ -52,9 +53,16 @@ $boi: #de3c4b;
 }
 .title2 {
   font-size: 5rem;
+  position: relative;
+  left: 10rem;
+  bottom: 2rem;
+  max-width: 50rem;
+  max-height: 15rem;
 }
 
 .text2 {
+  position: relative;
+  top: 5rem;
   font-size: 3rem;
   margin: 2rem;
 }
