@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './Dash.scss'
 import QuotesDB from './QuotesDB'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMugHot } from '@fortawesome/free-solid-svg-icons'
 
 const quotes = [
   {
@@ -147,12 +149,14 @@ const colors = [
   '#BF9411',
   '#DE3C4B',
   '#6FC9CE',
-  '#0D688C',
+  '#FFBB17',
   '#1FA675',
   '#A77CC9',
   '#F27C38',
-  '#753742'
+  '#ADE1B1'
 ]
+
+const coffee = <FontAwesomeIcon icon={faMugHot} />
 export default class Dash extends Component {
   constructor(props) {
     super(props)
@@ -246,7 +250,7 @@ export default class Dash extends Component {
             <section className="link2">
               <div className="coffeeLink">
                 <a className="coffeeBut" href="/coffee">
-                  <i className="fas fa-mug-hot"></i>
+                  {coffee}
                 </a>
               </div>
             </section>

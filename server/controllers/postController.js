@@ -2,8 +2,9 @@ const bcrypt = require('bcryptjs')
 
 module.exports = {
   getPosts(req, res) {
+    console.log(req.session)
     const db = req.app.get('db')
-    db.get_posts()
+    db.get_posts(req.session.dreamer.dreamer_id)
       .then(result => {
         res.status(200).send(result)
       })
@@ -29,9 +30,13 @@ module.exports = {
   },
 
   addPost(req, res) {
+    //console.log(req.body)
+    console.log(req.params)
     const db = req.app.get('db')
-    const { list_content } = req.body
-    db.add_post(list_content)
+    const { dreamer_id } = req.session.dreamer
+    const { id } = req.params
+    const { cat } = req.body
+    db.add_post([cat, +dreamer_id, +id])
       .then(result => {
         res.status(200).send(result)
       })

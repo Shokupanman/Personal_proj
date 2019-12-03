@@ -1,30 +1,28 @@
 $boi: #de3c4b;
 
-.pics {
-  max-height: 50rem;
-  max-width: 50rem;
+.pics2 {
+  max-height: 35rem;
+  max-width: 20rem;
   margin: 1rem;
 }
 
 .bigboi {
   display: flex;
-  justify-content: space-between;
   width: 170rem;
   height: 60rem;
+  margin: 5rem;
 }
 .taskdeal {
-  height: 50rem;
-  width: 35rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 40rem;
   border: double 0.5rem $boi;
   position: relative;
-  left: 10rem;
-  top: 7rem;
 }
 .catT {
-  width: 400rem;
   height: auto;
   display: flex;
-  margin: 4rem;
   flex-direction: column;
   align-items: flex-end;
 }
@@ -32,9 +30,9 @@ $boi: #de3c4b;
 .headi {
   display: flex;
   align-items: flex-end;
+  flex-direction: column;
   justify-content: space-between;
-  width: 100rem;
-  margin: 5rem 8rem;
+  width: 70rem;
 }
 .lander {
   display: flex;
@@ -43,8 +41,8 @@ $boi: #de3c4b;
 }
 .description {
   width: auto;
-  height: 20rem;
-  margin: 4rem;
+  max-height: 50rem;
+  margin: 5rem;
 }
 .title {
   font-size: 5rem;

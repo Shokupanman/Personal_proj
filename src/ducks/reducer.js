@@ -4,13 +4,13 @@ const initialState = {
   dreamer_id: ''
 }
 
-const toDoState = {
-  task1: '',
-  task2: '',
-  task3: '',
-  task4: '',
-  task5: ''
-}
+// const toDoState = {
+//   task1: '',
+//   task2: '',
+//   task3: '',
+//   task4: '',
+//   task5: ''
+// }
 
 export const UPDATE_USER_INFO = 'UPDATE_USER_INFO'
 export const TO_DO_LIST = 'TO_DO_LIST'

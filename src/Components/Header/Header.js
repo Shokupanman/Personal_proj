@@ -6,7 +6,18 @@ import { connect } from 'react-redux'
 import { updateUserInfo } from '../../ducks/reducer'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGraduationCap,
+  faListAlt,
+  faBuilding,
+  faBars
+} from '@fortawesome/free-solid-svg-icons'
 
+const schoolsIcon = <FontAwesomeIcon icon={faGraduationCap} />
+const listIcon = <FontAwesomeIcon icon={faListAlt} />
+const companyIcon = <FontAwesomeIcon icon={faBuilding} />
+const bars = <FontAwesomeIcon icon={faBars} />
 class Header extends Component {
   constructor() {
     super()
@@ -49,7 +60,24 @@ class Header extends Component {
     }
   }
 
+  // navBar() {
+  //   this.document.getElementById('myDropdown').classList.toggle('show')
+  // }
+
   render() {
+    // window.onClick = function(event) {
+    //   if (!event.target.matches('.dropbtn')) {
+    //     let dropdowns = document.getElementsByClassName('dropdown-content')
+    //     let i
+    //     for (i = 0; i < dropdowns.length; i++) {
+    //       let openDropdowns = dropdowns[i]
+    //       if (openDropdowns.classList.contains('show')) {
+    //         openDropdowns.classList.remove('show')
+    //       }
+    //     }
+    //   }
+    // }
+
     return (
       <div>
         <section className="header">
@@ -67,14 +95,30 @@ class Header extends Component {
             </Link>
           </div>
           <div className="nav">
+            {/* <div className="dropdown">
+              <button onClick={this.navBar()} className="dropbtn">
+                {bars}
+              </button>
+              <div id="myDropdown" className="dropdown-content">
+                <Link className="navi" to="/schools">
+                  {schoolsIcon}Schools
+                </Link>
+                <Link className="navi" to="/companies">
+                  {companyIcon}Careers
+                </Link>
+                <Link className="navi" to="/todo">
+                  {listIcon}My List!
+                </Link>
+              </div>
+            </div> */}
             <Link className="navi" to="/schools">
-              <i className="fas fa-graduation-cap"></i>Schools
+              {schoolsIcon}Schools
             </Link>
             <Link className="navi" to="/companies">
-              <i className="fas fa-building"></i>Careers
+              {companyIcon}Careers
             </Link>
             <Link className="navi" to="/todo">
-              <i className="fas fa-list-alt"></i>My List!
+              {listIcon}My List!
             </Link>
           </div>
         </section>

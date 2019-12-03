@@ -23,9 +23,9 @@ app.post('/auth/login', ctrl.login)
 app.delete('/auth/logout', ctrl.logout)
 app.get('/api/user', ctrl.getSession)
 
-app.post('/todo/post', postCtrl.addPost)
-app.put('/todo/edit', postCtrl.editPost)
-app.delete('/todo/remove', postCtrl.deletePost)
+app.post('/todo/post/:id', postCtrl.addPost)
+app.put('/todo/edit/:id', postCtrl.editPost)
+app.delete('/todo/remove/:id', postCtrl.deletePost)
 app.get('/todo/list', postCtrl.getPosts)
 
 app.post('/api/insert', ctrl.glads)
