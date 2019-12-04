@@ -11,13 +11,13 @@ export default class Posts extends Component {
     const {
       task: { list_id, list_content },
       tasks,
+      edit,
       deleteTask,
       toggleEdit,
       editTasks,
       editTask,
       handleChange
     } = this.props
-    console.log(list_id)
 
     return (
       <div>
@@ -26,7 +26,7 @@ export default class Posts extends Component {
           <div>
             <div>
               <p key={list_id}></p>
-              {toggleEdit === true ? (
+              {edit === true ? (
                 <input
                   className="listI"
                   value={editTasks}
@@ -38,7 +38,7 @@ export default class Posts extends Component {
             <button className="listB" onClick={() => deleteTask(list_id)}>
               X
             </button>
-            {toggleEdit ? (
+            {edit ? (
               <button
                 className="listB"
                 onClick={() => editTask(list_id, editTasks)}
@@ -46,7 +46,7 @@ export default class Posts extends Component {
                 {check}
               </button>
             ) : (
-              <button className="listB" onclick={() => toggleEdit()}>
+              <button className="listB" onClick={() => toggleEdit(list_id)}>
                 {pen}
               </button>
             )}

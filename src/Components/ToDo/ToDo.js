@@ -13,7 +13,8 @@ export default class ToDo extends Component {
       tasks: [],
       editTasks: '',
       newTasks: '',
-      toggleEdit: false
+      toggleEdit: false,
+      currentList: 0
     }
   }
 
@@ -21,7 +22,7 @@ export default class ToDo extends Component {
     this.getTasks()
   }
 
-  getTasks() {
+  getTasks = () => {
     axios.get('/todo/list').then(res => {
       this.setState({ tasks: res.data })
     })
@@ -39,29 +40,32 @@ export default class ToDo extends Component {
       })
   }
 
-  editTask = (body, dreamer_id) => {
+  editTask = list_id => {
+    // console.log(this.state.editTasks)
     axios
-      .put(`/todo/edit/${dreamer_id}`, { body })
+      .put(`/todo/edit/${list_id}`, { list_content: this.state.editTasks })
       .then(res => {
         this.setState({
           tasks: res.data,
-          editTask: false
+          editTask: false,
+          currentList: 0
         })
       })
       .catch(err => {
         console.log(err)
       })
   }
-  toggleEdit() {
+  toggleEdit = id => {
     this.setState({
-      toggleEdit: !this.state.toggleEdit
+      toggleEdit: !this.state.toggleEdit,
+      currentList: id
     })
   }
 
   handleChange = event => {
     //console.log(event.target.value)
     this.setState({
-      [event.target.name]: event.target.value
+      editTasks: event.target.value
     })
   }
 
@@ -81,6 +85,7 @@ export default class ToDo extends Component {
               editTasks={this.state.editTasks}
               deleteTask={this.deleteTasks}
               handleChange={this.handleChange}
+              edit={this.state.currentList === task.list_id}
               toggleEdit={this.toggleEdit}
               editTask={this.editTask}
             />
