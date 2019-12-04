@@ -5,8 +5,7 @@ $dreamC: #ade1b1;
 $dreamB: #273043;
 
 .header {
-  // background-image: url('https://images.unsplash.com/photo-1435224668334-0f82ec57b605?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-  background-color: black;
+  background-image: url('https://images.unsplash.com/photo-1487266659293-c4762f375955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
   display: flex;
   width: auto;
   height: 13rem;
@@ -14,31 +13,14 @@ $dreamB: #273043;
   align-items: center;
 }
 
-.logoDiv {
-  position: relative;
-  display: flex;
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  background-color: black;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-}
-
 .welcome {
-  color: $dreamC;
+  color: white;
   width: 15rem;
   font-size: 3.6rem;
 }
 .userInfo {
-  width: 30rem;
-  height: 5rem;
+  width: 39rem;
+  height: 15rem;
   font-size: 2rem;
   color: #fefffe;
   display: flex;
@@ -71,18 +53,19 @@ $dreamB: #273043;
 
 .nav {
   margin: 1rem;
-  width: 50rem;
+  width: 75rem;
   height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  font-size: 3rem;
+  font-weight: bold;
+  font-size: 3.5rem;
   margin: 1rem;
 }
 
 .navi {
-  color: $dreamC;
+  color: white;
 }
 
 @media (max-width: 990px) {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../logo.png'
 import './Header.scss'
 import { connect } from 'react-redux'
 import { updateUserInfo } from '../../ducks/reducer'
@@ -11,13 +10,15 @@ import {
   faGraduationCap,
   faListAlt,
   faBuilding,
-  faBars
+  faBars,
+  faDesktop
 } from '@fortawesome/free-solid-svg-icons'
 
 const schoolsIcon = <FontAwesomeIcon icon={faGraduationCap} />
 const listIcon = <FontAwesomeIcon icon={faListAlt} />
 const companyIcon = <FontAwesomeIcon icon={faBuilding} />
 const bars = <FontAwesomeIcon icon={faBars} />
+const deskTop = <FontAwesomeIcon icon={faDesktop} />
 class Header extends Component {
   constructor() {
     super()
@@ -88,11 +89,7 @@ class Header extends Component {
               </button>
             </Link>
           </div>
-          <div className="logoDiv">
-            <Link className="linkLo" to="/dashboard">
-              <img className="logo" alt="" src={logo} />
-            </Link>
-          </div>
+
           <div className="nav">
             {/* <div className="dropdown">
               <button onClick={this.navBar()} className="dropbtn">
@@ -110,6 +107,9 @@ class Header extends Component {
                 </Link>
               </div>
             </div> */}
+            <Link className="navi" to="/dashboard">
+              {deskTop} Home
+            </Link>
             <Link className="navi" to="/schools">
               {schoolsIcon}Schools
             </Link>

@@ -3,27 +3,81 @@ $dreamB: #273043;
 
 .dashboard {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  height: 90vh;
-  width: 100%;
+  height: 110vh;
   background-size: 100%;
-  background-image: url('https://images.unsplash.com/photo-1561652722-ba28a38150af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  background-color: black;
+  background-image: url('https://images.unsplash.com/photo-1574192324001-ee41e18ed679?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
   width: auto;
   background-repeat: no-repeat;
   margin: 1rem;
 }
 
+.topSection {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: auto;
+  height: 50vh;
+  padding: 4rem;
+}
+
+.logoDiv {
+  position: relative;
+  display: flex;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  background-color: black;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+}
+.qbox {
+  max-width: 80rem;
+  height: 30rem;
+  margin: 3rem;
+  border-radius: 5%;
+}
 .bottomhalf {
   display: flex;
   position: relative;
   justify-content: space-between;
   flex-direction: row;
+  background-color: white;
   align-items: center;
   height: 20vh;
-  width: 150vh;
+  border: double 1rem black;
+  border-radius: 2%;
+  width: auto;
   margin: 4rem 0rem;
+}
+
+.quotiB {
+  max-height: 23rem;
+  width: 90rem;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: row;
+}
+
+.personT {
+  background-color: transparent;
+  width: 40rem;
+  margin: 1rem;
+}
+.testiP {
+  font-size: 3rem;
+  background-color: white;
+  border: double 0.5rem black;
+  font-weight: bold;
 }
 
 .pBut {
@@ -75,12 +129,15 @@ $dreamB: #273043;
 }
 
 .explanation {
+  display: flex;
+  align-items: center;
   background-color: transparent;
-  border: 1rem double #ffffee;
-  color: #ffffee;
+  border: 1rem double black;
+  color: black;
   max-width: 90vh;
-  max-height: 80vh;
-  font-size: 3rem;
+  height: 40vh;
+  padding: 1.5rem;
+  font-size: 4rem;
 }
 
 .link2 {

@@ -14,7 +14,7 @@ export default class Company extends Component {
   }
 
   postTasks = cat => {
-    console.log(this.state.tasks)
+    //console.log(this.state.tasks)
     axios
       .post(`/todo/post/${this.props.school.school_id}`, { cat })
       .then(() => {

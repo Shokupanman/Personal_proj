@@ -21,8 +21,8 @@ module.exports = {
 
   editPost(req, res) {
     const db = req.app.get('db')
-    const { list_content } = req.body
-    db.edit_post(list_content)
+    const { list_content, list_id } = req.body
+    db.edit_post([list_content, list_id])
       .then(result => {
         res.status(200).send(result)
       })

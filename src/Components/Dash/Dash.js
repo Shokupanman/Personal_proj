@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import logo from '../../logo.png'
 import './Dash.scss'
 import QuotesDB from './QuotesDB'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -182,15 +184,30 @@ export default class Dash extends Component {
     return (
       <div className="dashDiv">
         <section className="dashboard">
+          <section className="topSection">
+            <div className="logoDiv">
+              <Link className="linkLo" to="/dashboard">
+                <img className="logo" alt="" src={logo} />
+              </Link>
+            </div>
+            <div className="explanation">
+              <p>
+                Dream Catchers is here to help you PURSUE and DISCOVER your
+                dream! Explore some of the top schools and companies for each
+                subject!
+              </p>
+            </div>
+          </section>
           <section className="quotes">
             <div
               id="main"
+              className="qbox"
               style={{
                 backgroundColor: this.state.color,
                 transition: 'background-color 1s'
               }}
             >
-              <div id="quote-box">
+              <div className="quotiB" id="quote-box">
                 <div id="text-box">
                   <p
                     id="text"
@@ -229,6 +246,18 @@ export default class Dash extends Component {
                 </div>
               </div>
             </div>
+            <div className="personT">
+              <h2 className="testiP">
+                Not sure what you wanna do?? Take this test and find out what
+                you are interested in!
+              </h2>
+              <a
+                className="pBut"
+                href="https://www.careerexplorer.com/career-test/"
+              >
+                CLICK ME!!
+              </a>
+            </div>
           </section>
           <section className="bottomhalf">
             <section className="link1">
@@ -240,13 +269,6 @@ export default class Dash extends Component {
                 </h1>
               </div>
             </section>
-            <div className="explanation">
-              <p>
-                Dream Catchers is here to help you PURSUE and DISCOVER your
-                dream! Explore some of the top schools and companies for each
-                subject!
-              </p>
-            </div>
             <section className="link2">
               <div className="coffeeLink">
                 <a className="coffeeBut" href="/coffee">

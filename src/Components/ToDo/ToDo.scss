@@ -1,0 +1,51 @@
+.listBK {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+  margin: 1rem 0 1rem 0;
+  background-repeat: no-repeat;
+  background-image: url('https://vastphotos.com/files/uploads/photos/10551/beautiful-mountain-photo-l.jpg');
+}
+
+.centerDiv {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tasks {
+  height: 90rem;
+  width: 60rem;
+}
+
+.listTitle {
+  max-width: 14rem;
+  height: 10rem;
+  font-size: 4rem;
+  color: white;
+}
+
+.listi {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.list {
+  max-width: 40rem;
+  max-height: 10rem;
+  color: white;
+  border: double 0.5rem white;
+}
+
+.listB {
+  background-color: black;
+  max-height: 2rem;
+  opacity: 70%;
+  color: white;
+  margin: 1rem;
+}

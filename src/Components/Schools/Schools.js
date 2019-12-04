@@ -31,7 +31,7 @@ export default class Schools extends Component {
 
   filterList = e => {
     let updatedList = this.state.schools.filter(school => {
-      console.log(this.state.schools)
+      //console.log(this.state.schools)
       return school.cat.includes(e.target.value)
     })
     this.setState({ filteredSchools: updatedList })
@@ -52,7 +52,7 @@ export default class Schools extends Component {
           </form>
         </header>
         <h1 className="cHeader">Schools</h1>
-        {this.state.schools.map(school => (
+        {this.state.filteredSchools.map(school => (
           <School key={school.id} school={school} />
         ))}
       </div>
