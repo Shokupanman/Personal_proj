@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Company.scss'
 import axios from 'axios'
+
 import Swal from 'sweetalert2'
 
 export default class Company extends Component {
@@ -8,20 +9,6 @@ export default class Company extends Component {
     super()
 
     this.state = {
-      cats: [
-        'art',
-        'ag',
-        'law',
-        'vid',
-        'education',
-        'architecture',
-        'government',
-        'hospitality',
-        'tech',
-        'science',
-        'medical',
-        'engineer'
-      ],
       tasks: []
     }
   }
@@ -43,19 +30,9 @@ export default class Company extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { title, reqs, avg_pay, description, img, cat } = this.props.company
     return (
       <div>
-        <section>
-          <div>
-            {this.state.cats.map(cat => (
-              <button className="catBut" key={cat} onClick={() => {}}>
-                {cat}
-              </button>
-            ))}
-          </div>
-        </section>
         <section className="bigboi">
           <div className="taskdeal">
             <div>

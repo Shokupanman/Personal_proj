@@ -38,7 +38,6 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
     axios.get('/api/user').then(res => {
       this.setState({
         user_name: res.data.user_name
@@ -90,7 +89,7 @@ class Header extends Component {
             </Link>
           </div>
           <div className="logoDiv">
-            <Link to="/dashboard">
+            <Link className="linkLo" to="/dashboard">
               <img className="logo" alt="" src={logo} />
             </Link>
           </div>

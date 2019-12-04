@@ -6,7 +6,8 @@ export default class Schools extends Component {
     super()
 
     this.state = {
-      schools: []
+      schools: [],
+      filteredSchools: []
     }
   }
 
@@ -19,7 +20,8 @@ export default class Schools extends Component {
       .get('/api/schools')
       .then(schools => {
         this.setState({
-          schools: schools.data
+          schools: schools.data,
+          filteredSchools: schools.data
         })
       })
       .catch(err => {
@@ -27,9 +29,28 @@ export default class Schools extends Component {
       })
   }
 
+  filterList = e => {
+    let updatedList = this.state.schools.filter(school => {
+      console.log(this.state.schools)
+      return school.cat.includes(e.target.value)
+    })
+    this.setState({ filteredSchools: updatedList })
+  }
+
   render() {
     return (
       <div>
+        <header>
+          <form>
+            <fieldset>
+              <input
+                type="text"
+                placeholder="Search through school subjects!"
+                onChange={e => this.filterList(e)}
+              />
+            </fieldset>
+          </form>
+        </header>
         <h1 className="cHeader">Schools</h1>
         {this.state.schools.map(school => (
           <School key={school.id} school={school} />

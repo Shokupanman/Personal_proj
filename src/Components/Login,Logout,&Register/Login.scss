@@ -9,6 +9,7 @@ $dreamB: #273043;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: $dreamC;
 }
 
 .regidiv1 {
@@ -20,11 +21,13 @@ $dreamB: #273043;
   align-items: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  color: $dreamC;
   background-image: url('https://images.unsplash.com/photo-1463780324318-d1a8ddc05a11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
 }
 
 .a {
   display: relative;
+  color: $dreamC;
 }
 
 .logo {
@@ -32,6 +35,7 @@ $dreamB: #273043;
   right: 4rem;
   width: 20rem;
   height: 20rem;
+  color: $dreamC;
 }
 
 .inputbk2 {
@@ -45,6 +49,7 @@ $dreamB: #273043;
   border-radius: 20%;
   width: 830px;
   height: 330px;
+  color: $dreamC;
   background-color: transparent;
 }
 
@@ -55,6 +60,7 @@ $dreamB: #273043;
   justify-content: space-between;
   width: 600px;
   margin: 20px;
+  color: $dreamC;
 }
 
 .button2 {
@@ -90,9 +96,11 @@ $dreamB: #273043;
   cursor: pointer;
   margin: 0 auto;
   z-index: 2;
+  color: $dreamC;
 }
 .link {
   text-decoration: none;
+  color: $dreamC;
 }
 
 .redirect2 {
@@ -110,21 +118,25 @@ $dreamB: #273043;
 .emailInput2 {
   position: relative;
   margin: 4rem;
+  color: $dreamC;
 }
 
 .userNameInput {
   position: relative;
   margin: 2rem;
+  color: $dreamC;
 }
 
 .passwordInput22 {
   position: relative;
   margin: 4rem;
+  color: $dreamC;
 }
 
 .passwordInput2 {
   position: relative;
   margin: 2rem;
+  color: $dreamC;
 }
 
 .divy {
@@ -133,13 +145,15 @@ $dreamB: #273043;
   height: 40px;
   justify-content: center;
   align-items: center;
+  color: $dreamC;
 }
 
 .Input-text {
   display: block;
+  background-color: black;
   margin: 0;
   padding: var(--inputPaddingV) var(--inputPaddingH);
-  color: inherit;
+  color: white;
   width: 100%;
   font-size: var(--inputFontSize);
   font-weight: inherit;
@@ -147,14 +161,16 @@ $dreamB: #273043;
   border: none;
   border-radius: 0.4rem;
   transition: box-shadow var(--transitionDuration);
+  color: $dreamC;
 }
 
 .Input-text::placeholder {
-  color: #b0bec5;
+  color: $dreamC;
 }
 
 .Input-text:focus {
   outline: none;
+  color: $dreamC;
   box-shadow: 0.2rem 0.8rem 1.6rem var(--colorPrimary600);
 }
 
@@ -178,6 +194,7 @@ $dreamB: #273043;
 
 .Input-text:placeholder-shown + .Input-label {
   visibility: hidden;
+  color: $dreamC;
   z-index: -1;
 }
 
@@ -186,6 +203,7 @@ $dreamB: #273043;
   visibility: visible;
   z-index: 1;
   opacity: 1;
+  color: $dreamC;
   transform: translate3d(0, var(--labelTransformedPosY), 0)
     scale(var(--labelScaleFactor));
   transition: transform var(--inputTransitionDuration), visibility 0ms,

@@ -43,6 +43,7 @@ class Register extends Component {
           })
       } else {
         console.log("Passwords don't match")
+        Swal.fire('Your passwords do not match')
       }
     } else {
       Swal.fire('Missing inputs required')
