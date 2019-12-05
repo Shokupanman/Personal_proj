@@ -1,0 +1,55 @@
+.coffeeApp {
+  display: flex;
+  width: auto;
+  height: 85vh;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Cappuccino_Chiang_Mai.JPG/1200px-Cappuccino_Chiang_Mai.JPG');
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headi2 {
+  color: white;
+  font-size: 6rem;
+  width: 40rem;
+}
+
+.landerC {
+  border: double white 1rem;
+  color: white;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.gratzi {
+  display: flex;
+  justify-content: center;
+  height: 85vh;
+  width: auto;
+  background-image: url('http://getwallpapers.com/wallpaper/full/b/b/4/1059969-large-thank-you-wallpaper-2560x1600-for-iphone-6.jpg');
+}
+
+.texti {
+  width: 25rem;
+}
+
+.checkout {
+  display: flex;
+  height: 10rem;
+  width: 30rem;
+  font-size: 1.4rem;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  border: double lightgray 1rem;
+}
+
+// .paymentBox {
+//   max-width: 100rem;
+//   max-height: 90rem;
+//   border: double lightgray 1rem;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   justify-content: center;
+// }

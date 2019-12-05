@@ -4,10 +4,16 @@ let massive = require('massive')
 let session = require('express-session')
 const ctrl = require('./controllers/controller')
 const postCtrl = require('./controllers/postController')
+const stripeLoader = require('stripe')
 
 let app = express()
 
-const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env
+const {
+  SERVER_PORT,
+  CONNECTION_STRING,
+  SESSION_SECRET,
+  STRIPE_SECRET
+} = process.env
 
 app.use(express.json())
 app.use(
@@ -17,6 +23,7 @@ app.use(
     secret: SESSION_SECRET
   })
 )
+app.use(require('body-parser').text())
 
 app.post('/auth/register', ctrl.register)
 app.post('/auth/login', ctrl.login)
@@ -33,6 +40,24 @@ app.get('/api/schools', ctrl.getSchools)
 
 app.post('/api/goodies', ctrl.goodies)
 app.get('/api/companies', ctrl.getCompanies)
+
+const stripe = new stripeLoader(STRIPE_SECRET)
+
+app.post('/charge', async (req, res) => {
+  try {
+    let { status } = await stripe.charges.create({
+      amount: 300,
+      currency: 'usd',
+      description: 'An example charge',
+      source: req.body
+    })
+    console.log(status)
+    res.json({ status })
+  } catch (err) {
+    console.log(err)
+    res.status(500).end()
+  }
+})
 
 massive(CONNECTION_STRING).then(db => {
   app.set('db', db)

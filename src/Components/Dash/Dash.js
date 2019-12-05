@@ -271,9 +271,9 @@ export default class Dash extends Component {
             </section>
             <section className="link2">
               <div className="coffeeLink">
-                <a className="coffeeBut" href="/coffee">
+                <Link className="coffeeBut" to="/coffee">
                   {coffee}
-                </a>
+                </Link>
               </div>
             </section>
           </section>

@@ -3,16 +3,24 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import { Elements, StripeProvider } from 'react-stripe-elements'
 import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './ducks/store'
+require('dotenv').config()
+
+console.log(process.env)
 
 ReactDOM.render(
-  <Provider store={store}>
-    <HashRouter>
-      <App />
-    </HashRouter>
-  </Provider>,
+  <StripeProvider apiKey={process.env.REACT_APP_STRIPE_API_KEY}>
+    <Provider store={store}>
+      <HashRouter>
+        <Elements>
+          <App />
+        </Elements>
+      </HashRouter>
+    </Provider>
+  </StripeProvider>,
 
   document.getElementById('root')
 )
