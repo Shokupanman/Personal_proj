@@ -209,3 +209,17 @@ $dreamB: #273043;
 html {
   font-size: 10px;
 }
+@media all and (width: 357px), (height: 812px) {
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    max-height: 500px;
+    margin: 20px;
+  }
+  .inputbk {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

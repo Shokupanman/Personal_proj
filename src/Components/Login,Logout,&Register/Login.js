@@ -7,6 +7,18 @@ import Swal from 'sweetalert2'
 import './Login.scss'
 import logo from '../../logo.png'
 
+var postcss = require('postcss')
+var easyMediaQuery = require('postcss-easy-media-query')
+
+postcss([
+  easyMediaQuery({
+    breakpoints: {
+      tablet: '800px',
+      mobile: '600px'
+    }
+  })
+])
+
 class Login extends Component {
   state = {
     email: '',
@@ -109,6 +121,13 @@ class Login extends Component {
             </div>
           </div>
         </section>
+        <footer>
+          <Link className="linkF" to="/register">
+            <h1 className="redirect2F">
+              *Not a part of the fam? Click here to change that!*
+            </h1>
+          </Link>
+        </footer>
       </div>
     )
   }

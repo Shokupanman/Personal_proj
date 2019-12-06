@@ -131,17 +131,17 @@ class Register extends Component {
                   </label>
                 </div>
                 <span></span>
+                <div className="button_cont" align="center">
+                  <button
+                    onClick={this.register}
+                    className="button"
+                    target="_blank"
+                    rel="nofollow noopener"
+                  >
+                    Register
+                  </button>
+                </div>
               </span>
-              <div className="button_cont" align="center">
-                <button
-                  onClick={this.register}
-                  className="button"
-                  target="_blank"
-                  rel="nofollow noopener"
-                >
-                  Register
-                </button>
-              </div>
             </div>
           </div>
           <Link to="/" className="link">
