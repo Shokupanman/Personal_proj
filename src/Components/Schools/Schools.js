@@ -43,15 +43,16 @@ export default class Schools extends Component {
         <header>
           <form>
             <fieldset>
+              <h1 className="cHeader">Search School Categories!</h1>
               <input
+                className="searchyBoi"
                 type="text"
-                placeholder="Search through school subjects!"
+                placeholder="Search through school categories!"
                 onChange={e => this.filterList(e)}
               />
             </fieldset>
           </form>
         </header>
-        <h1 className="cHeader">Schools</h1>
         {this.state.filteredSchools.map(school => (
           <School key={school.id} school={school} />
         ))}

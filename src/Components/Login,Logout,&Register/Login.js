@@ -24,14 +24,23 @@ class Login extends Component {
         .post('/auth/login', { email, password })
         .then(res => {
           this.props.updateUserInfo(res.data.user)
-          Swal.fire(res.data.message)
+          Swal.fire({
+            title: `Hey its good to see you!`,
+            icon: 'success'
+          })
           this.props.history.push('/dashboard')
         })
         .catch(err => {
-          Swal.fire(err.res.data.message)
+          Swal.fire({
+            title: err.res.data.message,
+            icon: 'error'
+          })
         })
     } else {
-      Swal.fire('Missing Inputs requried')
+      Swal.fire({
+        title: 'Missing Inputs requried',
+        icon: 'error'
+      })
     }
   }
 

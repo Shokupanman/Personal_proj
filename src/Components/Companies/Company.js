@@ -22,10 +22,16 @@ export default class Company extends Component {
         })
       })
       .then(res => {
-        Swal.fire('Awesome! We will go ahead and add that to your list')
+        Swal.fire({
+          text: 'Awesome! We will go ahead and add that to your list',
+          icon: 'success'
+        })
       })
       .catch(err => {
-        Swal.fire(err)
+        Swal.fire({
+          text: err,
+          icon: 'error'
+        })
       })
   }
 

@@ -16,7 +16,9 @@ $boi: #de3c4b;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  width: 40rem;
+  font-size: 2rem;
+  margin: 1rem;
+  max-width: 40rem;
   border: double 0.5rem $boi;
   position: relative;
 }

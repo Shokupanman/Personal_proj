@@ -18,7 +18,11 @@ class Coffee extends Component {
       body: token.id
     })
     console.log(response)
-    if (response.ok) Swal.fire('Thank you so much!')
+    if (response.ok)
+      Swal.fire({
+        icon: 'success',
+        text: "Hey, you're awesome!"
+      })
     if (response.ok) this.setState({ complete: true })
   }
 
@@ -26,7 +30,12 @@ class Coffee extends Component {
     if (this.state.complete)
       return (
         <div className="gratzi">
-          <h1 className="headi">Thank you for your donation!!</h1>
+          <h1 className="headi2">Thank you for your donation!!</h1>
+          <img
+            className="uDaBomb"
+            src="https://media1.tenor.com/images/4540dfba15e6b58368d794f3fa71bdbb/tenor.gif?itemid=11655828"
+            alt="You are awesome!!"
+          />
         </div>
       )
     return (

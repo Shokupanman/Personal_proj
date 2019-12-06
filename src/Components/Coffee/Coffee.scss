@@ -11,7 +11,9 @@
 .headi2 {
   color: white;
   font-size: 6rem;
-  width: 40rem;
+  width: 80rem;
+  height: 40rem;
+  border: white 1rem double;
 }
 
 .landerC {
@@ -21,12 +23,22 @@
   padding: 2rem;
 }
 
+.uDaBomb {
+  max-width: 90rem;
+  height: 90rem;
+  margin: 2rem;
+  border-radius: 11%;
+}
+
 .gratzi {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   height: 85vh;
+  margin: 0.5rem;
   width: auto;
-  background-image: url('http://getwallpapers.com/wallpaper/full/b/b/4/1059969-large-thank-you-wallpaper-2560x1600-for-iphone-6.jpg');
+  background-image: url('https://cdn.hipwallpaper.com/i/59/9/amuEj0.jpg');
 }
 
 .texti {

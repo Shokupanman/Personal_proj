@@ -23,10 +23,16 @@ export default class Company extends Component {
         })
       })
       .then(res => {
-        Swal.fire('Awesome! We will go ahead and add that to your list!')
+        Swal.fire({
+          title: 'Awesome! We will go ahead and add that to your list!',
+          icon: 'success'
+        })
       })
       .catch(err => {
-        Swal.fire(err)
+        Swal.fire({
+          text: err,
+          icon: 'error'
+        })
       })
   }
 
@@ -40,7 +46,7 @@ export default class Company extends Component {
           </section>
           <div className="headi2">
             <div className="catT2">
-              <div className="taskdeal2">
+              <div className="taskdeal99">
                 <div className="task1">
                   Apply to {name}!
                   <button

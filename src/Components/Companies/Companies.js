@@ -43,7 +43,9 @@ export default class Companies extends Component {
         <header>
           <form>
             <fieldset>
+              <h1 className="cHeader">Companies</h1>
               <input
+                className="searchyBoi"
                 type="text"
                 placeholder="Search different fields!"
                 onChange={e => this.filterList(e)}
@@ -51,7 +53,6 @@ export default class Companies extends Component {
             </fieldset>
           </form>
         </header>
-        <h1 className="cHeader">Companies</h1>
         {this.state.filteredCompanies.map(company => (
           <Company key={company.id} company={company} />
         ))}

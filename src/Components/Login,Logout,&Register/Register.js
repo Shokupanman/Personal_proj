@@ -36,14 +36,20 @@ class Register extends Component {
             console.log(res.data)
             this.props.updateUserInfo(res.data.user)
             this.props.history.push('/')
-            Swal.fire('WELCOME TO THE FAM! Now try your login!!')
+            Swal.fire({
+              title: 'WELCOME TO THE FAM! Now try your login!!',
+              icon: 'success'
+            })
           })
           .catch(err => {
             console.log(err)
           })
       } else {
         console.log("Passwords don't match")
-        Swal.fire('Your passwords do not match')
+        Swal.fire({
+          title: 'Your passwords do not match',
+          icon: 'error'
+        })
       }
     } else {
       Swal.fire('Missing inputs required')
