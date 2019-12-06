@@ -159,6 +159,19 @@ const colors = [
 ]
 
 const coffee = <FontAwesomeIcon icon={faMugHot} />
+
+var postcss = require('postcss')
+var easyMediaQuery = require('postcss-easy-media-query')
+
+postcss([
+  easyMediaQuery({
+    breakpoints: {
+      tablet: '800px',
+      mobile: '600px'
+    }
+  })
+])
+
 export default class Dash extends Component {
   constructor(props) {
     super(props)

@@ -108,11 +108,13 @@ export default class Company extends Component {
                 </div>
               </div>
             </div>
-            <h1 className="title2">{name}</h1>
-            <h3 className="text2">Catogory: {cat}</h3>
+            <div className="catiDeal">
+              <h1 className="title222">{name}</h1>
+              <h3 className="text2">Catogory: {cat}</h3>
+            </div>
           </div>
         </section>
-        <section className="description2">
+        <section className="description222">
           <h3 className="text2">City: {city}</h3>
           <h3 className="text2"> Instate: {in_state}</h3>
           <h3 className="text2">Out of State: {out_of_state}</h3>

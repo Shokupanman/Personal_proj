@@ -68,15 +68,49 @@ $dreamB: #273043;
   color: white;
 }
 
-@media (max-width: 990px) {
-  body {
-    height: 300vh;
-  }
-  .nav {
-    display: none;
-  }
+@media all and (width: 375px), (height: 812px) {
   .header {
     width: auto;
+  }
+
+  .nav {
+    margin: 1rem;
+    width: 75rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  .userInfo {
+    width: 22rem;
+    height: 15rem;
+    font-size: 2rem;
+    color: #fefffe;
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .logoutBut {
+    position: relative;
+    cursor: pointer;
+    color: $dreamC;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: black;
+    max-width: 10rem;
+    max-height: 3rem;
+    border: 4px solid $dreamC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease 0s;
   }
 
   .dropbtn {

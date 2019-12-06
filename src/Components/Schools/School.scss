@@ -60,17 +60,25 @@ $boi: #de3c4b;
   align-items: center;
   justify-content: space-evenly;
 }
-.description2 {
+.description222 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: black;
   justify-content: space-between;
   max-height: 30rem;
   max-width: 100rem;
   margin: 1rem 1rem 5rem 1rem;
 }
-.title2 {
+
+.catiDeal {
+  max-height: 40rem;
+  max-width: 70rem;
+  color: black;
+}
+.title222 {
   font-size: 5rem;
+  color: black;
   position: relative;
   max-width: 50rem;
   max-height: 15rem;
